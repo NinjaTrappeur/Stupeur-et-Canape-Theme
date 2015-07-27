@@ -1,0 +1,23 @@
+{{!< default}}
+<div class="container">
+  <div class="row">
+        {{> header}}
+  </div>
+<main class="main_stupeur" role="main">
+  <article class="article_stupeur" role="article"
+    itemscope itemtype="http://schema.org/Article">
+    <div class="row">
+
+    {{#foreach posts}}
+    <div class="col-md-12">
+      <div class="postcontent_stupeur">
+        <p>{{{content}}}</p>
+      </div>
+    </div>
+    {{/foreach}}
+  </div>
+  </article>
+  {{pagination}}
+</main>
+</div>
+{{>footer}}

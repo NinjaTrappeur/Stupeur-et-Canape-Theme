@@ -1,0 +1,14 @@
+<nav class="pagination" role="pagination">
+    {{#if next}}
+    	<a class="last-post" href="/page/{{pages}}"><img src="/assets/images/firstPostArrow.png" class="arrowImg" alt="First post"/></a>
+        <a class="newer-posts" href="{{pageUrl next}}"><img src="/assets/images/left-arrow.png" alt="Previous post" class="arrowImg leftArrow"/></a>
+    {{else}}
+        <img src="/assets/images/crossArrow.png" alt="Nope, it's the end." class="arrowImg leftArrow"/>
+    {{/if}}
+    {{#if prev}}
+        <a class="older-posts" href="{{pageUrl prev}}"><img src="/assets/images/right-arrow.png" alt="Next post" class="arrowImg"/></a>
+        <a class="last-post" href="/"><img src="/assets/images/lastPostArrow.png" alt="last post" class="arrowImg"/></a>
+    {{else}}
+        <img src="/assets/images/crossArrow.png" alt="Nope, it's the end." class="arrowImg"/>
+    {{/if}}
+</nav>
